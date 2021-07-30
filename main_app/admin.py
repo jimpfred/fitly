@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import UserProfile, Elog, Flog, User
 
-# Register your models here.
+admin.site.register(UserProfile)
+admin.site.register(Elog)
+admin.site.register(Flog)

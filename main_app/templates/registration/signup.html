@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="signup-form-container">
+  <form action="{% url 'signup' %}" method="POST">
+    <h1>Sign up</h1>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input class="btn" type="submit" value="Let's Get Fit!">
+  </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Here is Your Exercise History</h1>
+
+<a href="{% url 'elogs_create' %}">Add a New Exercise Event</a>
+
+{% for elog in elogs %}
+    {{elog.user_id}} {{elog.name}} {{elog.distance_miles}} {{elog.reps_laps}}
+
+    <a href="{% url 'elogs_update' elog.id %}">Edit</a>
+    <a href="{% url 'elogs_delete' elog.id %}">Delete</a>
+    
+{% endfor %}
+
+{% endblock %}
